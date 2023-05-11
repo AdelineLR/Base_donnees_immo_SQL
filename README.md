@@ -20,9 +20,10 @@ Laplace Immo, un réseau national d’agences immobilières, souhaite modifier l
 * Ventes.csv : table contenant les informations des ventes des biens
 
 ## Fichiers
-* Dictionnaire_de_donnees : dictionnaire des données
-* Schema_relationnel : schéma relationnel normalisé UML
+* LeRay_Adeline_1_Dictionnaire_donnees_092022 : dictionnaire des données
+* LeRay_Adeline_2_schema_092022 : schéma relationnel normalisé UML
 * Create_tables.sql : script MySQL pour la création des tables
-* Requetes : requêtes sur la base de données et leurs résultats
-* Presentation : présentation de la démarche de création de la BDD, de la BDD et des analyses demandées
+* LeRay_Adeline_4_requetes_092022 : requêtes sur la base de données et leurs résultats
+* LeRay_Adeline_6_requetes-alternatives_092022 : alternatives de code pour les requêtes
+* LeRay_Adeline_5_Presentation_092022 : présentation de la démarche de création de la BDD, de la BDD et des analyses demandées
 

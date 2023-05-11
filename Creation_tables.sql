@@ -1,0 +1,79 @@
+
+CREATE TABLE POPULATION (
+                ID_POP VARCHAR(5) NOT NULL,
+                ANNEE INT NOT NULL,
+                POP INT NOT NULL,
+                NAIS INT NOT NULL,
+                DECES INT NOT NULL,
+                PRIMARY KEY (ID_POP)
+);
+
+
+CREATE TABLE REGION (
+                ID_REG INT NOT NULL,
+                CODDEP VARCHAR(5) NOT NULL,
+                DEP VARCHAR(23) NOT NULL,
+                CODREG INT NOT NULL,
+                REG VARCHAR(26) NOT NULL,
+                PRIMARY KEY (ID_REG)
+);
+
+
+CREATE TABLE COMMUNE (
+                ID_COM INT NOT NULL,
+                CODPOS INT NOT NULL,
+                COM VARCHAR(50) NOT NULL,
+                ID_REG INT NOT NULL,
+                ID_POP VARCHAR(5) NOT NULL,
+                PRIMARY KEY (ID_COM)
+);
+
+
+CREATE TABLE BIEN (
+                ID_BIEN INT NOT NULL,
+                NO_VOIE INT,
+                ADR_COMPL VARCHAR(1),
+                TYPE_VOIE VARCHAR(4),
+                VOIE VARCHAR(50) NOT NULL,
+                SURF_CARREZ FLOAT NOT NULL,
+                SURF_RB INT NOT NULL,
+                SURF_TERRAIN INT,
+                TYPE_LOCAL VARCHAR(50) NOT NULL,
+                TOT_PIECES INT NOT NULL,
+                ID_COM INT NOT NULL,
+                PRIMARY KEY (ID_BIEN)
+);
+
+
+CREATE TABLE VENTE (
+                ID_VENTE INT NOT NULL,
+                DATE_VENTE DATE NOT NULL,
+                VALEUR INT NOT NULL,
+                ID_BIEN INT NOT NULL,
+                PRIMARY KEY (ID_VENTE)
+);
+
+
+ALTER TABLE COMMUNE ADD CONSTRAINT population_commune_fk
+FOREIGN KEY (ID_POP)
+REFERENCES POPULATION (ID_POP)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE COMMUNE ADD CONSTRAINT region_commune_fk
+FOREIGN KEY (ID_REG)
+REFERENCES REGION (ID_REG)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE BIEN ADD CONSTRAINT commune_bien_fk
+FOREIGN KEY (ID_COM)
+REFERENCES COMMUNE (ID_COM)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE VENTE ADD CONSTRAINT bien_vente_fk
+FOREIGN KEY (ID_BIEN)
+REFERENCES BIEN (ID_BIEN)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;

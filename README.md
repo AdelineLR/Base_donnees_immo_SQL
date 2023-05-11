@@ -2,7 +2,7 @@
  
  _Projet réalisé dans le cadre de la formation Data Analyst d'OpenClassrooms_
  
-## Objectifs 
+## Compétences acquises
 * Créer le schéma d'une base de données
 * Créer des tables dans une base de données
 * Charger des données dans une base de données

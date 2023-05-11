@@ -22,7 +22,7 @@ Laplace Immo, un réseau national d’agences immobilières, souhaite modifier l
 ## Fichiers
 * Dictionnaire_de_donnees : dictionnaire des données
 * Schema_relationnel : schéma relationnel normalisé UML
-* Create_tables : 
+* Create_tables.sql : script MySQL pour la création des tables
 * Requetes : requêtes sur la base de données et leurs résultats
 * Presentation : présentation de la démarche de création de la BDD, de la BDD et des analyses demandées
 

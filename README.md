@@ -1,6 +1,6 @@
 # Création et exploitation d'une base de données immobilière SQL
  
- _Projet réalisé dans le cadre de la formation Data Analyst d'OpenClassrooms_
+ _Projet réalisé dans le cadre de la formation Data Analyst d'OpenClassrooms (Projet 2 - Sept. 2022)_
  
 ## Compétences acquises
 * Créer le schéma d'une base de données
